@@ -9,6 +9,7 @@
 * **Tercer desafío:** servidor con Express y subida a Glitch. Creamos un servidor y mostramos el listado de productos y un producto random.<br>
 *[Lista de productos](https://julietamulinaris-backend.glitch.me/productos)*<br>
 *[Producto Random](https://julietamulinaris-backend.glitch.me/productoRandom)*
+* **Cuarto desafío:** uso de GET para mostrar todos los productos y uno solo según su ID, POST para agregar un nuevo producto a través de un formulario, PUT para actualizar un producto y DELETE para eliminar.
 
 
 ## Tecnologías
