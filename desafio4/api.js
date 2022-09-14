@@ -1,5 +1,3 @@
-// const express = require("express");
-
 class Api {
     constructor() {
         this.products = [];
