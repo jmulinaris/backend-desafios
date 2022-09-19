@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container">
+        <h2 class="titulo">Ingreso de productos</h2>
+        <br>
+        <form class="form" onsubmit="return addProduct(this)">
+            <div class="dato-form">
+                <label for="nombre">Nombre:</label>
+                <input class="input-form" id="title" type="text" name="title" required>
+            </div>
+            <div class="dato-form">
+                <label for="precio">Precio:</label>
+                <input class="input-form" id="price" type="number" name="price" required>
+            </div>
+            <div class="dato-form">
+                <label for="imagen">URL Imagen:</label>
+                <input class="input-form" id="thumbnail" type="text" name="thumbnail" required>
+            </div>
+            <div class="boton-form">
+                <button>AGREGAR</button>
+            </div>
+        </form>
+        <br>
+        <table class="table">
+            <h2 class="titulo">Lista de productos</h2>
+            <tr class="titulos-tabla">
+                <th>Título</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+            </tr>
+            <tr class="datos-tabla" id="productos">
+                <td>
+                    [TITULO]
+                </td>
+                <td>
+                    [PRECIO]
+                </td>
+                <td>
+                    [IMG]
+                </td>
+            </tr>
+        </table>
+            <h2 class="titulo">Centro de mensajes</h2>
+            <br>
+                <div class="form">
+                    <form onsubmit="return sendMessage(this)">
+                        <div class="dato-form">
+                            <label for="mail">Mail:</label>
+                            <input id="autor" class="input-form" id="mail" type="email" name="mail" required>
+                        </div>
+                        <div id="mensajes">
+                            <ul>
+                            <li class="historial-chat">
+                                <div>[FECHA]</div>
+                                <div>
+                                <span>[NOMBRE]</span>
+                                </div>
+                                <div>[TEXT]</div>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="dato-form">
+                            <label for="mensaje">Mensaje:</label>
+                            <input id="mensaje" class="input-form" id="mensaje" type="text" name="mensaje" required>
+                        </div>
+                        <div class="boton-form">
+                            <button>ENVIAR</button>
+                        </div>
+                    </form>
+                </div>
+            <br>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

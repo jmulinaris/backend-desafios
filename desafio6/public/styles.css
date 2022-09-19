@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Staatliches&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    margin:1% 10%;
+    color:blueviolet;
+}
+
+.form{
+    margin: 0 5%;
+    border: solid rgb(202, 199, 199) 1px;
+    background-color: rgb(226, 222, 222);
+    width:30%;
+    display:grid;
+    grid-template-columns: 80%;
+}
+
+.dato-form{
+    margin-top:1%;
+    margin-left:10%;
+}
+
+.input-form{
+    width:100%;
+}
+
+.boton-form{
+    margin-top:1%;
+    margin-left:10%;
+    margin-bottom:1%;
+}
+
+.imagen-tabla{
+    width:12%;
+    padding:1%;
+}
+
+.table{
+    display:flex;
+    align-items: center;
+    margin:1%;
+    border: solid rgb(212, 200, 200) 1px;
+    width:80%;
+}
+
+.titulos-tabla{
+    display:grid;
+    grid-template-columns: 33% 33% auto;
+    grid-gap:0.8rem;
+    text-align: center;
+    margin-top:1%;
+}
+
+.datos-tabla{
+    display:grid;
+    grid-template-columns: 33% 33% auto;
+    grid-gap:0.8rem;
+    text-align: center;
+    margin-top:1%;
+}
+
+.form-control{
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.historial-chat{
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    width:90%;
+    text-align: center;
+}

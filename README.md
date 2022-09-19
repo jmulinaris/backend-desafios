@@ -11,12 +11,17 @@
 *[Producto Random](https://julietamulinaris-backend.glitch.me/productoRandom)*
 * **Desafio 4:** uso de GET para mostrar todos los productos y uno solo según su ID, POST para agregar un nuevo producto a través de un formulario, PUT para actualizar un producto y DELETE para eliminar.
 * **Desafio 5:** creación de formularios utilizando motores de plantillas --> Handlebars, Pug y EJS.
+* **Desafio 6:** creación de un formulario de ingreso de productos en tiempo real y un centro de mensajes, utilizando Websocket.
 
 
 ## Tecnologías
 ***
 Teconologías utilizadas en el proyecto
 * [express]: Version 4.18.1
+* [ejs]: Version 3.1.8
+* [express-handlebars]: Version 6.0.6
+* [pug]: Version 3.0.2
+* [socket.io]: Version 4.5.2
 
 ## Instalación
 ***
