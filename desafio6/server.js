@@ -1,7 +1,6 @@
 const express = require("express")
-const fs = require("express")
 const { Server: HTTPServer } = require ("http")
-const { Server: SocketServer } = require ("socket.io")
+const { Server: IOServer } = require ("socket.io")
 
 const Api = require("./api")
 const product = new Api();
@@ -11,7 +10,7 @@ const mensajesApi = new ApiMsj("./mensajes.json");
 
 const app = express()
 const httpServer = new HTTPServer(app)
-const io = new SocketServer(httpServer)
+const io = new IOServer(httpServer)
 
 app.use(express.static("public"))
 app.use(express.json());
@@ -24,15 +23,16 @@ io.on("connection", async socket => {
 
     socket.on("new-product", data =>{
         product.save(data.title, data.price, data.thumbnail);
+        const products = product.getAll()
         io.sockets.emit("productos", products)
     })
 
-    const mensajes = await mensajesApi.getAll()
-    socket.emit("mensajes", mensajes)
+    messages = await mensajesApi.getAll()
+    socket.emit("mensajes", messages)
 
-    socket.on("new-msg", async mensaje =>{
-        mensaje.date = new Date().toLocaleString()
-        await mensajesApi.save(mensaje)
+    socket.on("new-msg", async data =>{
+        data.date = new Date().toLocaleString()
+        mensajes = await mensajesApi.save(data)
         io.sockets.emit("mensajes", mensajes)
     })
 })

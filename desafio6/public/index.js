@@ -1,19 +1,19 @@
 const socket = io.connect();
 
-const render = (data) =>{
-    const html = data.map (producto =>`<tr class="datos-tabla">
-            <td class="form-control">
-                ${producto.title}
-            </td>
-            <td class="form-control">
-                $${producto.price}
-            </td>
-            <td class="form-control">
-                <img class="imagen-tabla" src="${producto.thumbnail}" alt="${producto.thumbnail}">
-            </td>`)
-            .join ("")
-            document.getElementById("productos").innerHTML = html;
-}
+// const render = (productos) =>{
+//     const html = productos.map (producto =>`<tr class="datos-tabla">
+//             <td class="form-control">
+//                 ${producto.title}
+//             </td>
+//             <td class="form-control">
+//                 $${producto.price}
+//             </td>
+//             <td class="form-control">
+//                 <img class="imagen-tabla" src="${producto.thumbnail}" alt="${producto.thumbnail}">
+//             </td>`)
+//             .join ("")
+//             document.getElementById("productos").innerHTML = html;
+// }
 
 const addProduct = (e) =>{
     const title = document.getElementById("title").value;
@@ -26,24 +26,29 @@ const addProduct = (e) =>{
     return false;
 };
 
-socket.on("productos", data =>{
-    console.log(data);
-    render(data);
-})
+socket.on('productos', productos => {
+    makeTable(productos).then(html => {
+        document.getElementById('productos').innerHTML = html
+    })
+});
+
+const makeTable = (productos) =>{
+    return fetch ("tabla-productos.hbs")
+    .then(respuesta => respuesta.text())
+    .then(plantilla =>{
+        const template = Handlebars.compile(plantilla);
+        const html = template ({productos})
+        return html;
+    })
+}
 
 // *------CENTRO DE MENSAJES--------------------------
 const renderMsj = (mensajes) =>{
-    const html = mensajes.map (mensaje => ` <div>
-                            <ul id="mensajes">
-                            <li class="historial-chat">
-                                <div>${mensaje.date}</div>
-                                <div>
-                                <span>${mensaje.autor}</span>
-                                </div>
-                                <div>${mensaje.texto}</div>
-                            </li>
-                            </ul>
-                        </div>`)
+    const html = mensajes.map (mensaje => `<div class="historial-chat">
+                <b class="mensaje-autor">${mensaje.autor}</b>
+                [<span class="mensaje-fecha">${mensaje.date}</span>] :
+                <i class="mensaje-texto">${mensaje.texto}</i>
+            </div>`)
             .join(" ")
             document.getElementById("mensajes").innerHTML = html;
 }
@@ -56,7 +61,6 @@ const sendMessage = (e) =>{
     return false;
 }
 
-socket.on("mensajes", mensaje =>{
-    console.log(mensaje);
-    render(mensaje);
+socket.on("mensajes", data =>{
+    renderMsj(data);
 })

@@ -5,77 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+    integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="container">
-        <h2 class="titulo">Ingreso de productos</h2>
-        <br>
-        <form class="form" onsubmit="return addProduct(this)">
-            <div class="dato-form">
-                <label for="nombre">Nombre:</label>
-                <input class="input-form" id="title" type="text" name="title" required>
+            <h2 class="titulo">Ingreso de productos</h2>
+            <form class="form" onsubmit="return addProduct(this)">
+                <div class="dato-form">
+                    <label for="nombre">Nombre:</label>
+                    <input class="input-form" id="title" type="text" name="title" required>
+                </div>
+                <div class="dato-form">
+                    <label for="precio">Precio:</label>
+                    <input class="input-form" id="price" type="number" name="price" required>
+                </div>
+                <div class="dato-form">
+                    <label for="imagen">URL Imagen:</label>
+                    <input class="input-form" id="thumbnail" type="text" name="thumbnail" required>
+                </div>
+                <div class="boton-container">
+                    <button class="boton-form">AGREGAR</button>
+                </div>
+            </form>
+            <div class="lista-container">
+                <h2 class="titulo">Lista de Productos</h2>
+                <div id="productos"></div>
             </div>
-            <div class="dato-form">
-                <label for="precio">Precio:</label>
-                <input class="input-form" id="price" type="number" name="price" required>
-            </div>
-            <div class="dato-form">
-                <label for="imagen">URL Imagen:</label>
-                <input class="input-form" id="thumbnail" type="text" name="thumbnail" required>
-            </div>
-            <div class="boton-form">
-                <button>AGREGAR</button>
-            </div>
-        </form>
-        <br>
-        <table class="table">
-            <h2 class="titulo">Lista de productos</h2>
-            <tr class="titulos-tabla">
-                <th>Título</th>
-                <th>Precio</th>
-                <th>Imagen</th>
-            </tr>
-            <tr class="datos-tabla" id="productos">
-                <td>
-                    [TITULO]
-                </td>
-                <td>
-                    [PRECIO]
-                </td>
-                <td>
-                    [IMG]
-                </td>
-            </tr>
-        </table>
+
             <h2 class="titulo">Centro de mensajes</h2>
-            <br>
-                <div class="form">
+                <div class="chat">
                     <form onsubmit="return sendMessage(this)">
                         <div class="dato-form">
                             <label for="mail">Mail:</label>
                             <input id="autor" class="input-form" id="mail" type="email" name="mail" required>
                         </div>
-                        <div id="mensajes">
-                            <ul>
-                            <li class="historial-chat">
-                                <div>[FECHA]</div>
-                                <div>
-                                <span>[NOMBRE]</span>
-                                </div>
-                                <div>[TEXT]</div>
-                            </li>
-                            </ul>
-                        </div>
+                        <br>
+
+                        <div id="mensajes"></div>
+
+                        <br>
                         <div class="dato-form">
                             <label for="mensaje">Mensaje:</label>
                             <input id="mensaje" class="input-form" id="mensaje" type="text" name="mensaje" required>
                         </div>
-                        <div class="boton-form">
-                            <button>ENVIAR</button>
+                        <div class="boton-container">
+                            <button class="boton-form">ENVIAR</button>
                         </div>
                     </form>
                 </div>
-            <br>
     <script src="/socket.io/socket.io.js"></script>
     <script src="index.js"></script>
 </body>
