@@ -5,7 +5,7 @@ class ApiMsj {
         this.file = file;
     }
 
-    //* crear producto
+    //* crear mensaje
     async save(mensaje) {
         try {
             const data = await fs.promises.readFile(this.file, "utf-8");
@@ -19,7 +19,7 @@ class ApiMsj {
         }
     }
 
-    //* obtener todos
+    //* ver mensajes
     async getAll(){
         try {
             const data = await fs.promises.readFile(this.file, "utf-8");
