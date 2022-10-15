@@ -1,3 +1,5 @@
+const fs  = require ("fs");
+
 class ApiMsj {
     constructor (file){
         this.file = file;
