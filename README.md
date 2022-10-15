@@ -12,6 +12,7 @@
 * **Desafio 4:** uso de GET para mostrar todos los productos y uno solo según su ID, POST para agregar un nuevo producto a través de un formulario, PUT para actualizar un producto y DELETE para eliminar.
 * **Desafio 5:** creación de formularios utilizando motores de plantillas --> Handlebars, Pug y EJS.
 * **Desafio 6:** creación de un formulario de ingreso de productos en tiempo real y un centro de mensajes, utilizando Websocket.
+* **Desafio 7:** Aplicación de bases de datos para la persistencia del desafío anterior (MariaDB para productos y SQLite3 para mensajes).
 
 
 ## Tecnologías
@@ -22,6 +23,9 @@ Teconologías utilizadas en el proyecto
 * [express-handlebars]: Version 6.0.6
 * [pug]: Version 3.0.2
 * [socket.io]: Version 4.5.2
+* [knex]: Version 2.3.0
+* [mysql]: Version 2.18.1
+* [sqlite3]: Version 5.1.2
 
 ## Instalación
 ***
@@ -29,5 +33,4 @@ Pasos para clonar el repo:
 ```
 $ git clone https://github.com/julimulinaris/backend-desafios
 $ npm install
-$ npm start
 ```
