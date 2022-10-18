@@ -1,12 +1,15 @@
 const express = require("express")
 const { Server: HTTPServer } = require ("http")
 const { Server: IOServer } = require ("socket.io")
+const { connection } = require("./configMySql");
+const { sqLiteConfig } = require("./configSqLite.js");
 
-const Api = require("./api")
-const product = new Api();
+const Product = require("./productClass")
+const producto = new Product (connection, "productos");
+console.log(producto.getAll())
 
-const ApiMsj = require("./apiMensajes")
-const mensajesApi = new ApiMsj("./mensajes.json");
+const ApiMsj = require("./messagesClass")
+const mensajesApi = new ApiMsj((sqLiteConfig, "mensajes"));
 
 const app = express()
 const httpServer = new HTTPServer(app)
@@ -18,12 +21,12 @@ app.use(express.urlencoded({ extended: true }));
 
 io.on("connection", async socket => {
     console.log("Usuario conectado")
-    const products = product.getAll()
+    const products = producto.getAll()
     socket.emit("productos", products)
 
-    socket.on("new-product", data =>{
-        product.save(data.title, data.price, data.thumbnail);
-        const products = product.getAll()
+    socket.on("new-product", async data =>{
+        await producto.save(data);
+        const products = await producto.getAll()
         io.sockets.emit("productos", products)
     })
 
