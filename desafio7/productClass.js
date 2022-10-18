@@ -15,7 +15,12 @@ class Product {
 
     async save (title, price, thumbnail){
         try {
-            return await this.KnexProducts.insert(title, price,thumbnail).into(this.table)
+            const newProduct = {
+                title,
+                price,
+                thumbnail
+            }
+            return await this.KnexProducts.insert(newProduct).into(this.table)
         } catch (e) {
             console.log(e);
         }

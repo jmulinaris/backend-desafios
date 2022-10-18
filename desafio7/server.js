@@ -23,19 +23,18 @@ io.on("connection", async socket => {
     socket.emit("productos", products)
 
     socket.on("new-product", async data =>{
-        await producto.save(data);
+        await producto.save(data.title, data.price, data.thumbnail);
         const products = await producto.getAll()
         io.sockets.emit("productos", products)
     })
 
-    const messages = await mensajesApi.getAll()
+    messages = await mensajesApi.getAll()
     socket.emit("mensajes", messages)
 
     socket.on("new-msg", async data =>{
-        data.date = new Date().toLocaleString()
-        const messages = await mensajesApi.save(data)
-        console.log(messages)
-        console.log(data)
+        const date = new Date().toLocaleString()
+        await mensajesApi.save(data.autor, data.texto, date)
+        messages = await mensajesApi.getAll()
         io.sockets.emit("mensajes", messages)
     })
 })
