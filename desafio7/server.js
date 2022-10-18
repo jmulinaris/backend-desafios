@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 io.on("connection", async socket => {
     console.log("Usuario conectado")
-    const products = producto.getAll()
+    const products = await producto.getAll()
     socket.emit("productos", products)
 
     socket.on("new-product", async data =>{

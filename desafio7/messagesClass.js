@@ -5,9 +5,9 @@ class Message {
     }
 
     //* crear mensaje
-    async save(mensaje) {
+    async save(autor, texto) {
         try {
-            return await this.KnexMessages.insert(mensaje).into(this.table)
+            return await this.KnexMessages.insert(autor, texto).into(this.table)
         } catch (e) {
             console.log(e);
         }
@@ -16,7 +16,7 @@ class Message {
     //* ver mensajes
     async getAll(){
         try {
-            return this.KnexMessages.select("*").from(this.table)
+            return await this.KnexMessages.select("*").from(this.table)
         } catch (e){
             console.log(e);
         }

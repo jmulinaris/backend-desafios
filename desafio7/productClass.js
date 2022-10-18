@@ -6,16 +6,16 @@ class Product {
 
     async getAll () {
         try {
-            return this.KnexProducts.select("*").from(this.table)
+            return await this.KnexProducts.select("*").from(this.table)
         }
         catch (e) {
             console.log(e);
         }
     }
 
-    async save (producto){
+    async save (title, price, thumbnail){
         try {
-            return await this.KnexProducts.insert(producto).into(this.table)
+            return await this.KnexProducts.insert(title, price,thumbnail).into(this.table)
         } catch (e) {
             console.log(e);
         }

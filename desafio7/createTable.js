@@ -7,9 +7,9 @@ const KnexSqLite = require("knex")(sqLiteConfig);
 KnexMySql.schema
     .createTable("productos", (table) => {
         table.increments("id")
-        table.string("nombre")
-        table.integer("precio")
-        table.string("imagen")
+        table.string("title")
+        table.integer("price")
+        table.string("thumbnail")
     }).then (() =>{
         console.log("Tabla creada!")
     }).catch (e => console.log(e))
@@ -17,7 +17,10 @@ KnexMySql.schema
 
 KnexSqLite.schema
     .createTable("mensajes", (table) => {
-        table.string("mensaje")
+        table.increments("id")
+        table.string("autor")
+        table.string("date")
+        table.string("texto")
     }).then (() =>{
         console.log("Tabla creada!")
     }).catch (e => console.log(e))
