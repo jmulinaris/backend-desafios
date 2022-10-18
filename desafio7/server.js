@@ -9,7 +9,7 @@ const producto = new Product (connection, "productos");
 console.log(producto.getAll())
 
 const ApiMsj = require("./messagesClass")
-const mensajesApi = new ApiMsj((sqLiteConfig, "mensajes"));
+const mensajesApi = new ApiMsj(sqLiteConfig, "mensajes");
 
 const app = express()
 const httpServer = new HTTPServer(app)
