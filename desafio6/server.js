@@ -22,7 +22,7 @@ io.on("connection", async socket => {
     socket.emit("productos", products)
 
     socket.on("new-product", data =>{
-        product.save(data.title, data.price, data.thumbnail);
+        product.save(data);
         const products = product.getAll()
         io.sockets.emit("productos", products)
     })

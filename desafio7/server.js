@@ -6,7 +6,6 @@ const { sqLiteConfig } = require("./configSqLite.js");
 
 const Product = require("./productClass")
 const producto = new Product (connection, "productos");
-console.log(producto.getAll())
 
 const ApiMsj = require("./messagesClass")
 const mensajesApi = new ApiMsj(sqLiteConfig, "mensajes");

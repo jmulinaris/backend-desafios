@@ -12,7 +12,12 @@
 * **Desafio 4:** uso de GET para mostrar todos los productos y uno solo según su ID, POST para agregar un nuevo producto a través de un formulario, PUT para actualizar un producto y DELETE para eliminar.
 * **Desafio 5:** creación de formularios utilizando motores de plantillas --> Handlebars, Pug y EJS.
 * **Desafio 6:** creación de un formulario de ingreso de productos en tiempo real y un centro de mensajes, utilizando Websocket.
-* **Desafio 7:** Aplicación de bases de datos para la persistencia del desafío anterior (MariaDB para productos y SQLite3 para mensajes).
+* **Desafio 7:** Aplicación de bases de datos para la persistencia del desafío anterior (MariaDB para productos y SQLite3 para mensajes). 
+  Pasos para la prueba: 
+  1. Crear la base de datos bd_productos en MariaDB.
+  2. Ejecutar createTable.js
+  3. Ejecutar server.js
+  4. Ingresar a localhost
 
 
 ## Tecnologías
