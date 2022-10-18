@@ -1,7 +1,7 @@
 const sqLiteConfig = {
     client: "sqlite3",
     connection: {
-        filename: "./mensajes",
+        filename: "./DB/ecommerce.sqlite",
     },
     useNullAsDefault: true,
 };
@@ -9,4 +9,4 @@ const sqLiteConfig = {
 
 module.exports = {
     sqLiteConfig,
-}
+};
