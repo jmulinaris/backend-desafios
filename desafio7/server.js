@@ -19,7 +19,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 io.on("connection", async socket => {
-    console.log("Usuario conectado")
     const products = await producto.getAll()
     socket.emit("productos", products)
 
@@ -29,13 +28,15 @@ io.on("connection", async socket => {
         io.sockets.emit("productos", products)
     })
 
-    messages = await mensajesApi.getAll()
+    const messages = await mensajesApi.getAll()
     socket.emit("mensajes", messages)
 
     socket.on("new-msg", async data =>{
         data.date = new Date().toLocaleString()
-        mensajes = await mensajesApi.save(data)
-        io.sockets.emit("mensajes", mensajes)
+        const messages = await mensajesApi.save(data)
+        console.log(messages)
+        console.log(data)
+        io.sockets.emit("mensajes", messages)
     })
 })
 

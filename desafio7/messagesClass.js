@@ -5,9 +5,9 @@ class Message {
     }
 
     //* crear mensaje
-    async save(texto, autor) {
+    async save(autor, texto, date) {
         try {
-            return await this.KnexMessages.insert(texto, autor).into(this.table)
+            return await this.KnexMessages.insert(autor, texto, date).into(this.table)
         } catch (e) {
             console.log(e);
         }

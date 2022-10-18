@@ -32,7 +32,7 @@ io.on("connection", async socket => {
 
     socket.on("new-msg", async data =>{
         data.date = new Date().toLocaleString()
-        mensajes = await mensajesApi.save(data)
+        mensajes = await mensajesApi.save(data.texto, data.autor)
         io.sockets.emit("mensajes", mensajes)
     })
 })
