@@ -18,6 +18,7 @@
   2. Ejecutar createTable.js
   3. Ejecutar server.js
   4. Ingresar a localhost
+* **Desafio 8:** Creación de una base de datos con Mongo Shell llamada "ecommerce" que tiene dos colecciones: productos y mensajes. Se realiza un CRUD en productos y se crea un usuario que solo pueda leer.
 
 
 ## Tecnologías
