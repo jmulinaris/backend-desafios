@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+    integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container">
+    <div class="lista-container">
+        <h2 class="titulo">Listado de Productos</h2>
+        <div id="productos"></div>
+    </div>
+
+    <!-- *CHAT -->
+    <h2 class="titulo">Centro de mensajes</h2>
+    <div id="porcentaje"></div>
+    <div class="chat">
+        <form onsubmit="return sendMessage(this)">
+            <input type="email" id="email" class="input-form" placeholder="Ingresá tu email" required>
+            <input type="text" id="name" class="input-form" placeholder="Ingresá tu nombre" required />
+            <input type="text" id="lastName" class="input-form" placeholder="Ingresá tu apellido" required />
+            <input type="text" id="age" class="input-form" placeholder="Ingresá tu edad" required />
+            <input type="text" id="alias" class="input-form" placeholder="Ingresá tu alias" required />
+            <input type="text" id="avatar" class="input-form" placeholder="URL de tu  avatar" required />
+
+            <div id="mensajes"></div>
+
+            <div class="mensaje-boton">
+                <input type="text" id="mensaje" class="input-form" placeholder="Ingresá un mensaje" />
+                <button class="boton-form">ENVIAR</button>
+            </div>
+            
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

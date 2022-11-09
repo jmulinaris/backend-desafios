@@ -19,6 +19,7 @@
   3. Ejecutar server.js
   4. Ingresar a localhost
 * **Desafio 8:** Creación de una base de datos con Mongo Shell llamada "ecommerce" que tiene dos colecciones: productos y mensajes. Se realiza un CRUD en productos y se crea un usuario que solo pueda leer.
+* **Desafio 9:** Se utiliza la librería faker y normalización para mejorar el desafío 6 de Websocket.
 
 
 ## Tecnologías
@@ -32,6 +33,8 @@ Teconologías utilizadas en el proyecto
 * [knex]: Version 2.3.0
 * [mysql]: Version 2.18.1
 * [sqlite3]: Version 5.1.2
+* [@faker-js/faker]: Version 7.6.0
+* [normalizr]: Version 3.6.2
 
 ## Instalación
 ***

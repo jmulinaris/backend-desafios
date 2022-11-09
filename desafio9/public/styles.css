@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Poppins&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    margin:1% 10%;
+    color:blueviolet;
+    background-color: rgb(226, 222, 222);
+    width:60%;
+    text-align: center;
+}
+
+.form{
+    margin: 0 5%;
+    border: solid rgb(202, 199, 199) 1px;
+    background-color: rgb(226, 222, 222);
+    width:30%;
+    display:grid;
+    grid-template-columns: 80%;
+}
+
+.input-form{
+    margin:3%;
+    height:30px;
+    width:80%;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+.boton-form{
+    align-items: center;
+    margin: 1%;
+    padding:1%;
+    color:white;
+    background-color: black;
+    height: 30px; 
+    cursor:pointer;
+}
+
+.mensaje-boton{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.imagen-tabla{
+    width:25%;
+    padding:1%;
+}
+
+.lista-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:1%;
+    width:100%;
+}
+
+.table{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:1%;
+    margin-left:8%;
+    border: solid rgb(212, 200, 200) 1px;
+    width:80%;
+}
+
+.titulos-tabla{
+    display:grid;
+    grid-template-columns: 33% 33% auto;
+    grid-gap:0.8rem;
+    text-align: center;
+    margin-top:1%;
+    color: blueviolet;
+}
+
+.datos-tabla{
+    display:grid;
+    grid-template-columns: 33% 33% auto;
+    grid-gap:0.8rem;
+    text-align: center;
+    margin-top:1%;
+}
+
+.form-control{
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.chat{
+    margin: 0 5%;
+    border: solid rgb(202, 199, 199) 1px;
+    width:60%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historial{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#porcentaje{
+    font-size: 20px;
+    padding:1%;
+}
+
