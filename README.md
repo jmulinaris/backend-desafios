@@ -20,6 +20,7 @@
   4. Ingresar a localhost
 * **Desafio 8:** Creación de una base de datos con Mongo Shell llamada "ecommerce" que tiene dos colecciones: productos y mensajes. Se realiza un CRUD en productos y se crea un usuario que solo pueda leer.
 * **Desafio 9:** Se utiliza la librería faker y normalización para mejorar el desafío 6 de Websocket.
+* **Desafio 10:** Al desafío anterior le agregamos login por formulario. Una vez logueado se muestra el chat y formulario para cargar productos. Luego del minuto de inactividad se cierra la sesión.
 
 
 ## Tecnologías
@@ -35,6 +36,8 @@ Teconologías utilizadas en el proyecto
 * [sqlite3]: Version 5.1.2
 * [@faker-js/faker]: Version 7.6.0
 * [normalizr]: Version 3.6.2
+* [connect-mongo]: Version 4.6.0
+* [mongodb]: Version 4.11.0
 
 ## Instalación
 ***
