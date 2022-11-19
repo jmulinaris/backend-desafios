@@ -35,7 +35,7 @@ app.use(
     saveUninitialized: false,
     //ttl: 600000,
     cookie: {
-      maxAge: 60000,
+      maxAge: 600000,
     },
   })
 );
