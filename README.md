@@ -20,13 +20,15 @@
   4. Ingresar a localhost
 * **Desafio 8:** Creación de una base de datos con Mongo Shell llamada "ecommerce" que tiene dos colecciones: productos y mensajes. Se realiza un CRUD en productos y se crea un usuario que solo pueda leer.
 * **Desafio 9:** Se utiliza la librería faker y normalización para mejorar el desafío 6 de Websocket.
-* **Desafio 10:** Al desafío anterior le agregamos login por formulario. Una vez logueado se muestra el chat y formulario para cargar productos. Luego del minuto de inactividad se cierra la sesión.
+* **Desafio 10:** Al desafío anterior le agregamos login por formulario. Una vez logueado se muestra el chat y formulario para cargar productos. Luego del minuto de inactividad se cierra la sesión. Persistencia de datos en Mongo Atlas.
+* **Desafio 11:** Utilizamos passport para autenticación de usuario, login con usuario y password. Se guarda la información en Mongo Atlas y se encripta la contraseña con la librería Bcrypt.
 
 
 ## Tecnologías
 ***
 Teconologías utilizadas en el proyecto
 * [express]: Version 4.18.1
+* [nodemon]: Version 2.0.20
 * [ejs]: Version 3.1.8
 * [express-handlebars]: Version 6.0.6
 * [pug]: Version 3.0.2
@@ -38,6 +40,9 @@ Teconologías utilizadas en el proyecto
 * [normalizr]: Version 3.6.2
 * [connect-mongo]: Version 4.6.0
 * [mongodb]: Version 4.11.0
+* [passport]: Version 0.6.0
+* [passport-local]: Version 1.0.0
+* [bcrypt]: Version 5.1.0
 
 ## Instalación
 ***
