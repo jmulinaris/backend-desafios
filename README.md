@@ -22,6 +22,7 @@
 * **Desafio 9:** Se utiliza la librería faker y normalización para mejorar el desafío 6 de Websocket.
 * **Desafio 10:** Al desafío anterior le agregamos login por formulario. Una vez logueado se muestra el chat y formulario para cargar productos. Luego del minuto de inactividad se cierra la sesión. Persistencia de datos en Mongo Atlas.
 * **Desafio 11:** Utilizamos passport para autenticación de usuario, login con usuario y password. Se guarda la información en Mongo Atlas y se encripta la contraseña con la librería Bcrypt.
+* **Desafio 12:** Muevo las claves y credenciales a un archivo .env (configuración de Mongo Atlas y SQL). Se agrega una nueva ruta /info que muestra datos del proyecto utilizando process y /api/randoms que calcula números random utilizando el método Fork de child process. 
 
 
 ## Tecnologías
@@ -43,6 +44,8 @@ Teconologías utilizadas en el proyecto
 * [passport]: Version 0.6.0
 * [passport-local]: Version 1.0.0
 * [bcrypt]: Version 5.1.0
+* [dotenv]: Version 16.0.3
+* [minimist]: Version 1.2.7
 
 ## Instalación
 ***
