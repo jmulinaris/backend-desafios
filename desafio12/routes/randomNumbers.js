@@ -3,20 +3,21 @@ import { fork } from "child_process"
 
 const randomNumRouter = new Router ();
 
-const forked = fork("./scripts/getRandomNum.js");
-
 randomNumRouter.get("/", (req, res) =>{
+    const forked = fork("./scripts/getRandomNum.js");
     const { cant } = req.query;
     let cantEnv;
     if (cant) {
         cantEnv = cant;
     } else {
-        cantEnv = 20;
+        cantEnv = 100000000;
     }
-    forked.on("message", (randoms) => {
-        res.send({ "Números random": randoms });
-    });
+    
     forked.send(cantEnv);
+
+    forked.on("message", (message) => {
+        res.send(message);
+    });
 });
 
 export default randomNumRouter; 
