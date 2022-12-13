@@ -23,6 +23,22 @@
 * **Desafio 10:** Al desafío anterior le agregamos login por formulario. Una vez logueado se muestra el chat y formulario para cargar productos. Luego del minuto de inactividad se cierra la sesión. Persistencia de datos en Mongo Atlas.
 * **Desafio 11:** Utilizamos passport para autenticación de usuario, login con usuario y password. Se guarda la información en Mongo Atlas y se encripta la contraseña con la librería Bcrypt.
 * **Desafio 12:** Muevo las claves y credenciales a un archivo .env (configuración de Mongo Atlas y SQL). Se agrega una nueva ruta /info que muestra datos del proyecto utilizando process y /api/randoms que calcula números random utilizando el método Fork de child process. 
+* **Desafio 13:** Ejecución del servidor en modo Fork o Cluster y ajuste del balance de carga utilizando NGINX.
+  Comandos utilizados:
+  1. Nodemon: 
+    a. Fork: nodemon .
+    b. Cluster: nodemon . -m cluster
+  2. Forever:
+    a. Fork: forever start server.js --watch
+    b. Cluster: forever start server.js -m cluster --watch
+    c. Listar procesos: forever list
+    d. Finalización: forever stopall
+  3. PM2
+    a. Fork: pm2 start server.js  --watch 
+    b. Cluster: pm2 start server.js --watch -i max
+    c. Listar procesos: pm2 list
+    d. Finalización: pm2 stop all
+   
 
 
 ## Tecnologías
@@ -46,6 +62,8 @@ Teconologías utilizadas en el proyecto
 * [bcrypt]: Version 5.1.0
 * [dotenv]: Version 16.0.3
 * [minimist]: Version 1.2.7
+* [forever]: Version 4.0.3
+* [nginx]: Version 1.23.2
 
 ## Instalación
 ***
