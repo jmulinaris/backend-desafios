@@ -1,14 +1,14 @@
 Comandos utilizados:
-  1. Nodemon: 
-    a. Fork: nodemon .
-    b. Cluster: nodemon . -m cluster
-  2. Forever:
-    a. Fork: forever start server.js --watch
-    b. Cluster: forever start server.js -m cluster --watch
-    c. Listar procesos: forever list
-    d. Finalización: forever stopall
-  3. PM2
-    a. Fork: pm2 start server.js  --watch 
-    b. Cluster: pm2 start server.js --watch -i max
-    c. Listar procesos: pm2 list
-    d. Finalización: pm2 stop all
+* **Nodemon:**
+    1. Fork: nodemon .
+    2. Cluster: nodemon . -m cluster
+* **Forever:**
+    1. Fork: forever start server.js --watch
+    2. Cluster: forever start server.js -m cluster --watch
+    3. Listar procesos: forever list
+    4. Finalización: forever stopall
+* **PM2:**
+    1. Fork: pm2 start server.js  --watch 
+    2. Cluster: pm2 start server.js --watch -i max
+    3. Listar procesos: pm2 list
+    4. Finalización: pm2 stop all
