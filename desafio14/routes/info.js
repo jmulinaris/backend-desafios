@@ -27,7 +27,6 @@ infoRouter.get("/info", (req, res) =>{
         carpeta: carpeta,
         procesadores: procesadores,
     });
-    console.log(argumentos, plataforma, version, memoria, pathExe, processId, carpeta, procesadores)
 });
 
 export default infoRouter;
