@@ -24,6 +24,7 @@
 * **Desafio 11:** Utilizamos passport para autenticación de usuario, login con usuario y password. Se guarda la información en Mongo Atlas y se encripta la contraseña con la librería Bcrypt.
 * **Desafio 12:** Muevo las claves y credenciales a un archivo .env (configuración de Mongo Atlas y SQL). Se agrega una nueva ruta /info que muestra datos del proyecto utilizando process y /api/randoms que calcula números random utilizando el método Fork de child process. 
 * **Desafio 13:** Ejecución del servidor en modo Fork o Cluster y ajuste del balance de carga utilizando NGINX.
+* **Desafio 14:** Compresión del proyecto con Gzip, implementación de loggueo (info, warning y error) con Log4JS y análisis de performance del servidor realizando test con: Artillery, 0x, node-inspect y Autocannon.
 
 
 ## Tecnologías
@@ -49,6 +50,11 @@ Teconologías utilizadas en el proyecto
 * [minimist]: Version 1.2.7
 * [forever]: Version 4.0.3
 * [nginx]: Version 1.23.2
+* [log4js]: Version 6.7.1
+* [artillery]: Version 2.0.0-27
+* [0x]: Version 5.4.1
+* [compression]: Version 1.7.4
+* [autocannon]: Version 7.10.0
 
 ## Instalación
 ***
