@@ -25,6 +25,10 @@
 * **Desafio 12:** Muevo las claves y credenciales a un archivo .env (configuración de Mongo Atlas y SQL). Se agrega una nueva ruta /info que muestra datos del proyecto utilizando process y /api/randoms que calcula números random utilizando el método Fork de child process. 
 * **Desafio 13:** Ejecución del servidor en modo Fork o Cluster y ajuste del balance de carga utilizando NGINX.
 * **Desafio 14:** Compresión del proyecto con Gzip, implementación de loggueo (info, warning y error) con Log4JS y análisis de performance del servidor realizando test con: Artillery, 0x, node-inspect y Autocannon.
+* **Desafio 15:** Desplegar el proyecto en la nube. <br>
+  *[Repo](https://github.com/julimulinaris/desafio15-backend)*
+  *[Railway](https://desafio15-backend-production.up.railway.app/)* <br>
+   
 
 
 ## Tecnologías
@@ -38,6 +42,7 @@ Teconologías utilizadas en el proyecto
 * [socket.io]: Version 4.5.2
 * [knex]: Version 2.3.0
 * [mysql]: Version 2.18.1
+* [mysql2]: Version 2.3.3
 * [sqlite3]: Version 5.1.2
 * [@faker-js/faker]: Version 7.6.0
 * [normalizr]: Version 3.6.2
