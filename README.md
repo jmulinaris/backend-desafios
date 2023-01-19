@@ -28,11 +28,13 @@
 * **Desafio 15:** Desplegar el proyecto en la nube. <br>
   *[Repo](https://github.com/julimulinaris/desafio15-backend)*<br>
   *[Railway](https://desafio15-backend-production.up.railway.app/login)*
+* **Desafio 16:** Dividir el proyecto final en capas. <br> 
+  *[Proyecto final](https://github.com/julimulinaris/final-backend)*
 
 
 ## Tecnologías
 ***
-Teconologías utilizadas en el proyecto
+Teconologías utilizadas en los desafíos:
 * [express]: Version 4.18.1
 * [nodemon]: Version 2.0.20
 * [ejs]: Version 3.1.8
