@@ -28,8 +28,13 @@
 * **Desafio 15:** Desplegar el proyecto en la nube. <br>
   *[Repo](https://github.com/julimulinaris/desafio15-backend)*<br>
   *[Railway](https://desafio15-backend-production.up.railway.app/login)*
-* **Desafio 16:** Dividir el proyecto final en capas. <br> 
+
+Los siguientes desafíos se trabajan directamente sobre el repo del proyecto final: <br>
   *[Proyecto final](https://github.com/julimulinaris/final-backend)*
+
+* **Desafio 16:** Dividir el proyecto final en capas.
+* **Desafio 17:** Aplicar factory y DTO a productos y carrito.
+* **Desafio 18:** Testeo de nuestra Api utilizando Axios, SuperTest, Chai y Mocha.
 
 
 ## Tecnologías
@@ -61,6 +66,10 @@ Teconologías utilizadas en los desafíos:
 * [0x]: Version 5.4.1
 * [compression]: Version 1.7.4
 * [autocannon]: Version 7.10.0
+* [chai]: Version 4.3.7
+* [mocha]: Version 10.2.0
+* [supertest]: Version 6.3.3
+* [axios]: Version 1.2.6
 
 ## Instalación
 ***
