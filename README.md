@@ -29,13 +29,13 @@
   *[Repo](https://github.com/julimulinaris/desafio15-backend)*<br>
   *[Railway](https://desafio15-backend-production.up.railway.app/login)*
 
-Los siguientes desafíos se trabajan directamente sobre el repo del proyecto final: <br>
-  *[Proyecto final](https://github.com/julimulinaris/final-backend)*
-
+Los siguientes 3 desafíos se trabajan directamente sobre el repo del proyecto final: <br>
 * **Desafio 16:** Dividir el proyecto final en capas.
 * **Desafio 17:** Aplicar factory y DTO a productos y carrito.
-* **Desafio 18:** Testeo de nuestra Api utilizando Axios, SuperTest, Chai y Mocha.
+* **Desafio 18:** Testeo de nuestra Api utilizando Axios, SuperTest, Chai y Mocha. <br>
+  *[Proyecto final](https://github.com/julimulinaris/final-backend)*
 
+* **Desafio 19:** Reformamos el proyecto para trabajar con GraphQL.
 
 ## Tecnologías
 ***
@@ -70,6 +70,8 @@ Teconologías utilizadas en los desafíos:
 * [mocha]: Version 10.2.0
 * [supertest]: Version 6.3.3
 * [axios]: Version 1.2.6
+* [graphql]: Version 16.6.0
+* [express-graphql]: Version 0.12.0
 
 ## Instalación
 ***
