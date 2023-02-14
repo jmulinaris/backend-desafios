@@ -36,6 +36,7 @@ Los siguientes 3 desafíos se trabajan directamente sobre el repo del proyecto f
   *[Proyecto final](https://github.com/julimulinaris/final-backend)*
 
 * **Desafio 19:** Reformamos el proyecto para trabajar con GraphQL.
+* **Desafio 20:** Creamos un servidor utilizando el framework Koa.
 
 ## Tecnologías
 ***
@@ -72,6 +73,7 @@ Teconologías utilizadas en los desafíos:
 * [axios]: Version 1.2.6
 * [graphql]: Version 16.6.0
 * [express-graphql]: Version 0.12.0
+* [koa]: Version 2.14.1
 
 ## Instalación
 ***
