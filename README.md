@@ -37,6 +37,8 @@ Los siguientes 3 desafíos se trabajan directamente sobre el repo del proyecto f
 
 * **Desafio 19:** Reformamos el proyecto para trabajar con GraphQL.
 * **Desafio 20:** Creamos un servidor utilizando el framework Koa.
+* **Desafio 21:** Creamos un servidor utilizando Deno.
+
 
 ## Tecnologías
 ***
